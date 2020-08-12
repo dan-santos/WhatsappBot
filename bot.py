@@ -20,6 +20,7 @@ class Bot:
 
     def inicia(self, contato):
         # Abre o whatsapp e espera 20 segundos até começar a procurar os elementos do DOM
+        # Esse tempo é o que você utiliza para logar o seu celular com o whatsapp web
         # Após isso, ele busca na barra de pesquisa o nome do contato e clica na conversa
 
         self.driver.get('https://web.whatsapp.com/')
@@ -35,7 +36,7 @@ class Bot:
 
     def envia_mensagem(self, texto):
         # Envia a mensagem para o contato aberto
-        
+
         self.caixa_mensagem = self.driver.find_element_by_xpath("//div[@class='_3FRCZ copyable-text selectable-text'][@data-tab='1']")
         self.caixa_mensagem.send_keys(texto)
         time.sleep(0.5)

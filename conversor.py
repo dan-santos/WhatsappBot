@@ -1,11 +1,11 @@
 class Conversor:
     def __init__(self, txt_file):
-        # É iniciado com o nome do arquivo que ele converter
+        # É iniciado com o nome do arquivo que ele vai converter
 
         self.txt_file = txt_file
 
     def converter(self):
-        # Acessa o arquivo passado no construtor do objeto é retorna uma lista com as linhas do documento
+        # Acessa o arquivo passado no construtor do objeto e retorna uma lista com as linhas do documento
 
         f = open(self.txt_file, 'r', encoding='utf-8', errors='ignore')
         lista = f.readlines()
@@ -13,7 +13,7 @@ class Conversor:
         return self.limpar_lista(lista)
 
     def limpar_lista(self, lista):
-        # Aqui ele faz a limpexa de linhas que não queremos enviar para o contato
+        # Aqui ele faz a limpeza de linhas que não queremos enviar para o contato
 
         numeros = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
         lista_limpa = list()

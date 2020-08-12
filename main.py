@@ -11,7 +11,7 @@ conversor = Conversor('hp.txt')
 def iniciar_bot():
     # Abre o whatsapp e entra na conversa do contato passado como parâmetro
 
-    wpp_bot.inicia('Backup')
+    wpp_bot.inicia('Nome do contato')
 
 
 def pega_lista():
